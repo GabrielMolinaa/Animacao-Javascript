@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.scene{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scene i{
+    position: absolute;
+    top: -250px;
+    background: rgba(255, 255, 255, 0.5);
+    animation: estrela linear infinite;
+}
+
+@keyframes estrela{
+    from{
+        transform: translateY(0vh);
+    }
+    to{
+        transform: translateY(200vh);
+    }
+}
+
+.scene .foguete{
+    position: relative;
+    animation: animacao 0.15s linear alternate infinite;
+}
+
+.scene .foguete::after{
+    content: "";
+    position: absolute;
+    bottom: -265px;
+    left: 46.5%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 200px;
+    background:linear-gradient(rgb(255, 136, 0),transparent);
+    filter: blur(10px);
+
+}
+
+
+@keyframes animacao {
+    
+    to{
+        transform: translateY(4px);
+    }
+
+}
